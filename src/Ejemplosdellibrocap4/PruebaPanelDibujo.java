@@ -1,3 +1,5 @@
+package Ejemplosdellibrocap4;
+
 // Fig. 4.19: PruebaPanelDibujo.java
  // Crear un objeto JFrame para mostrar un objeto PanelDibujo.
  import javax.swing.JFrame;
@@ -12,8 +14,7 @@
  // crea un nuevo marco para contener el panel
  JFrame aplicacion = new JFrame();
 
- // establece el marco para salir cuando se cierre
- aplicacion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ // establece el marco para salir cuando se cierre aplicacion.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
  aplicacion.add(panel); // agrega el panel al marco
  aplicacion.setSize(250, 250); // establece el tamaño del marco

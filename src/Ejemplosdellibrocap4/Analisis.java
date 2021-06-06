@@ -1,3 +1,5 @@
+package Ejemplosdellibrocap4;
+
  // Fig. 4.12: Analisis.java
 // Analisis de los resultados de un examen, utilizando instrucciones de control anidadas.
 
@@ -17,13 +19,12 @@ public class Analisis {
         // procesa 10 estudiantes, usando ciclo controlado por contador
         while (contadorEstudiantes <= 10) {
             // pide al usuario la entrada y obtiene el valor
-            System.out.print(“Escriba el resultado(1 = aprobado, 2 = reprobado)
-            : ”);
- int resultado = entrada.nextInt();
+            System.out.print("Escriba el resultado(1 = aprobado, 2 = reprobado): ");
+            int resultado = entrada.nextInt();
 
             // if...else anidado en la instrucción while
             if (resultado == 1) {
-                aprobados = aprobados + 1;
+                aprobados ++;
             } else {
                 reprobados = reprobados + 1;
             }
@@ -32,16 +33,11 @@ public class Analisis {
         }
 
         // fase de terminación; prepara y muestra los resultados
-        System.out.printf(
-        “Aprobados:
-         % d % nReprobados: %d % n”, aprobados, reprobados
-        );
+        System.out.printf("Aprobados: %d \n Reprobados: %d \n", aprobados, reprobados);
 
  // determina si más de 8 estudiantes aprobaron
  if (aprobados > 8)
             System.out.println("Bono para el instructor");
-    
 
-!” );
  }
  } // fin de la clase Analisis
