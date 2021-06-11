@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 
 // Fig. 4.19: PruebaPanelDibujo.java
  // Crear un objeto JFrame para mostrar un objeto PanelDibujo.

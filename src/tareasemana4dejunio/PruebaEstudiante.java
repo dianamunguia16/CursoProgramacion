@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 
   //Fig. 4.5: PruebaEstudiante.java
  // Crea y prueba objetos Estudiante.

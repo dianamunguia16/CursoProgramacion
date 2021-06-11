@@ -1,6 +1,6 @@
 // Fig. 4.4: Estudiante.java
 // Clase Estudiante que almacena el nombre y promedio de un estudiante.
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 public class Estudiante 
 {
 

@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 // Fig. 4.8: PromedioClase.java
  // Cómo solucionar el problema del promedio de la clase mediante la repetición
  //controlada por contador.

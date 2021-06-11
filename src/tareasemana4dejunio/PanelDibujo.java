@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 
  // Fig. 4.18: PanelDibujo.java
  // Uso de drawLine para conectar las esquinas de un panel.

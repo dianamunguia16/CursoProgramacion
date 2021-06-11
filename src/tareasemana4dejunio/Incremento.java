@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 
 // Fig. 4.15: Incremento.java
  // Operadores de preincremento y postincremento.

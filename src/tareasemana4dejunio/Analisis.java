@@ -1,4 +1,4 @@
-package Ejemplosdellibrocap4;
+package tareasemana4dejunio;
 
  // Fig. 4.12: Analisis.java
 // Analisis de los resultados de un examen, utilizando instrucciones de control anidadas.
