@@ -16,7 +16,7 @@ public class ImpuestoRenta {
     static Scanner escaner = new Scanner(System.in);     
     public static void main(String[] args) {
         int vContinua = 0; //Variable para saber si el programa debe de seguir ejecutandose :) 0 Se ejecuta 1 no se ejecuta
-        try{
+        try{ // Preever excepciones para la ejecucuión de un programa
         do{
       double vSalario = 0;
       int vDependientes = 0;
@@ -28,10 +28,10 @@ public class ImpuestoRenta {
       vSalario = escaner.nextDouble();
       
        System.out.println("El IR que debe de pagar es de : " + calcularImpuesto(vDependientes,vSalario));   
-       System.out.println("\n\nDigite un 0 para ingresar oro registro o un 1 para salir"); 
+       System.out.println("\n\nDigite un 0 para ingresar otro registro o un 1 para salir"); 
        vContinua = escaner.nextInt();
         }while (vContinua == 0);
-        }catch (Exception e){
+        }catch (Exception e){// Especifica la excepción que puede ocurrir
             e.printStackTrace();
            }
     } 
