@@ -16,7 +16,7 @@ public class ImpuestoRenta {
     static Scanner escaner = new Scanner(System.in);     
     public static void main(String[] args) {
         int vContinua = 0; //Variable para saber si el programa debe de seguir ejecutandose :) 0 Se ejecuta 1 no se ejecuta
-        try{ // Preever excepciones para la ejecucuión de un programa
+       
         do{
       double vSalario = 0;
       int vDependientes = 0;
@@ -31,18 +31,20 @@ public class ImpuestoRenta {
        System.out.println("\n\nDigite un 0 para ingresar otro registro o un 1 para salir"); 
        vContinua = escaner.nextInt();
         }while (vContinua == 0);
-        }catch (Exception e){// Especifica la excepción que puede ocurrir
-            e.printStackTrace();
-           }
+        
     } 
       
-     static public double calcularImpuesto(int numDependientes, double salario){  
+     static public double calcularImpuesto(int numDependientes, double salario){  //lo estoy llamando
       double impuesto,gravable;
       gravable = salario * devuelve_porcentage_gravable(numDependientes);
-      impuesto = gravable * devuelve_porcentage_ir(gravable);
-      return impuesto;   
+      impuesto = gravable * devuelve_porcentage_ir(gravable);// a lo que nos dio el primer procedimiento y se multiplica 
+      //por la parte del salario
+      return impuesto;   // entonces ahora devuelvame todo el calculo
      }
-      static public double devuelve_porcentage_ir (double gravable) {
+      static public double devuelve_porcentage_ir (double gravable) {// aqui estoy declarando un método para que me devuelva los porcentajes
+          
+         //para el salario
+ 
       double vIr;
           if (gravable < 200000){
               vIr = 0;
