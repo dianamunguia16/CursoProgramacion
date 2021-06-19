@@ -37,11 +37,14 @@ public class Quizpizzeria {
         quesochedar=1520;
         jamón=1500;
         tamañopizza=0;
-        double precioppizzagrande = 12000;
+        double resultado = 0;
+        double preciopizzagrande = 12000;
         double preciopizzapequena=10000;
         if(tamañopizza==1){
-            preciopizzagrande*0.40
-                    
+            resultado = preciopizzagrande*0.40;{
+            if{peperoni==1){
+             resultado= preciopizzagrande+peperoni;
+             
                 
         }
     }
