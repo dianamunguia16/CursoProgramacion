@@ -32,6 +32,8 @@ public class ImpuestoRenta {
        vContinua = escaner.nextInt();
         }while (vContinua == 0);
         
+        
+
     } 
       
      static public double calcularImpuesto(int numDependientes, double salario){  //lo estoy llamando
