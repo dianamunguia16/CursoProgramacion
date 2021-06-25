@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package QUIZ;
+package Clase18dejunio;
 
 import java.util.Scanner;
 
@@ -42,12 +42,25 @@ public class Quizpizzeria {
         double preciopizzapequena=10000;
         if(tamañopizza==1){
             resultado = preciopizzagrande*0.40;{
-            if{peperoni==1){
-             resultado= preciopizzagrande+peperoni;
-             
-                
+            if(peperoni==1){
+            resultado= preciopizzagrande+peperoni+0.40; }
+             else if (peperoni==2) {
+            resultado=preciopizzagrande;
+            }
+             else {
+                 System.out.println("DATO INVALIDO");
+             }
         }
+            if(jamón==1){
+                resultado=preciopizzagrande+jamón+0.40;
+            if(jamón==2)
+                resultado=preciopizzagrande+jamón+0.40;
+                
+            }
+        
+        
+        }
+       
     }
-    
 
 }

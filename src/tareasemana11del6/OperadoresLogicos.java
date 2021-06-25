@@ -30,7 +30,7 @@ public class OperadoresLogicos
  "AND logico booleano (&)", "false & false", (false & false),
  "false & true", (false & true), 
  "true & false", (true & false),
- "true & true", (true & true),
+ "true & true", (true & true)),
 
  // crea tabla de verdad para el operador | (OR inclusivo lógico booleano)
  System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
@@ -38,7 +38,7 @@ public class OperadoresLogicos
  "false | false", (false | false),
  "false | true", (false | true),
  "true | false", (true | false), 
- "true | true", (true | true),
+ "true | true", (true | true)),
 
  // crea tabla de verdad para el operador ^ (OR exclusivo lógico booleano)
  System.out.printf("%s%n%s: %b%n%s: %b%n%s: %b%n%s: %b%n%n",
@@ -46,10 +46,10 @@ public class OperadoresLogicos
  "false ^ false", (false ^ false),
  "false ^ true", (false ^ true), 
  "true ^ false", (true ^ false),
- "true ^ true", (true ^ true),
+ "true ^ true", (true ^ true)),
 
  // crea tabla de verdad para el operador ! (negación lógica)
  System.out.printf("%s%n%s: %b%n%s: %b%n", "NOT logico (!)",
- "!false", (!false), "!true", (!true),
+ "!false", (!false), "!true", (!true)),
 
-}}
+
