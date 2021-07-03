@@ -27,7 +27,7 @@ public class MinisterioDeEconomia {
         int contatrabco=0;
         double poblacion=0;
         System.out.println("Seleccione la opcion de su interes\n1-Ingrese su informacion\2-Conozca su informacion\n"
-                + "3-cantidad de personas por provincia");
+                + "3-cantidad de personas por provincia\n4-conozca su limite de credito");
         int opc = economi.nextInt();
 
         switch (opc) {
@@ -61,22 +61,27 @@ public class MinisterioDeEconomia {
                  
             case 3:
                 provincias(provincia,poblacion);
-                break;//LLAMO A LAS PROVINCIAS
                  
+                break;
             case 4:
-                double limitcredit=0&&
                 
+                double limitcredit=0;
+                while(limitcredit<1000){
+                    double totalcredito= (contatrabco/cantidadtrabajadores*poblacion);
+                     }
+           case 5: 
+                    
+                    if(canttrabajcovid>10&&<0)
+                    
                 
+                break;
                 
-                
+                 }
         }
         
-        
-        
 
-    }
-    //PRIMER METODO QUE APLICO
-    public static void provincias(String provincia,double poblacion){
+    //PRIMER METODO QUE APLIC
+        public static void provincias(String provincia,double poblacion){
     
                 if(provincia=="Alajuela"){
                     poblacion =848146;
@@ -107,9 +112,7 @@ public class MinisterioDeEconomia {
     
     
     }
-    
-}
 
+ }
 
-
-
+ 
