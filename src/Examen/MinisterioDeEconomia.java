@@ -34,12 +34,23 @@ public class MinisterioDeEconomia {
                 System.out.println("Ingrese el nombre completo de su empresa");
                 nombre = nombr.nextLine();
                 Scanner prov = new Scanner(System.in);
-                System.out.println("Ingrese el nombre completo de su empresa");
-                nombre = nombr.nextLine();
+                System.out.println("Ingrese el nombre completo de la provincia donde se ubican sus trabajadores");
+                provincia= nombr.nextLine();
                 Scanner canttrabajador = new Scanner(System.in);
-                System.out.println("Ingrese el nombre completo de su empresa");
+                System.out.println("Ingrese la cantidad de trabajadores que han tenido covid 19");
                 canttrabajcovid = nombr.nextBoolean();
-
+                Scanner ingreso = new Scanner(System.in);
+                System.out.println("Ingrese el monto ingreso promedio por mes");
+                ingresopromedio= ingreso.nextDouble();
+                Scanner credi = new Scanner(System.in);
+                System.out.println("Su empresa cuenta con creditos actualmente");
+                creditos = credi.nextBoolean();
+                
+                 break;
+                 
+                 
+            case 2:
+                 System.out.println("Sus datos corresponden a:"+nombre+provincia+ canttrabajcovid+ingresopromedio+creditos);
         }
 
     }
