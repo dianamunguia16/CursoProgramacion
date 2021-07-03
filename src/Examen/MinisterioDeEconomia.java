@@ -21,98 +21,119 @@ public class MinisterioDeEconomia {
         boolean canttrabajcovid = true;
         double ingresopromedio = 0;
         boolean creditos = true;
-        
+
         Scanner economi = new Scanner(System.in);
-        
-        int contatrabco=0;
-        double poblacion=0;
-        System.out.println("Seleccione la opcion de su interes\n1-Ingrese su informacion\2-Conozca su informacion\n"
-                + "3-cantidad de personas por provincia\n4-conozca su limite de credito");
-        int opc = economi.nextInt();
 
-        switch (opc) {
+        int contatrabco = 0;
+        double poblacion = 0;
+        while (true) {
+            System.out.println("Seleccione la opcion de su interes\n1-Ingrese su informacion\2-Conozca su informacion\n"
+                    + "3-cantidad de personas por provincia\n4-conozca su limite de credito");
+            int opc = economi.nextInt();
 
-            case 1:
-                
-                System.out.println("Ingrese el nombre completo de su empresa");
-                nombre = economi.nextLine();
-                System.out.println("Ingrese el nombre completo de la provincia donde se ubican sus trabajadores");
-                provincia= economi.nextLine();
-                Scanner canttrabajador = new Scanner(System.in);
-                System.out.println("Ingrese la cantidad de trabajadores que han tenido covid 19");
-                canttrabajcovid = economi.nextBoolean();
-                if(canttrabajcovid)
-                    contatrabco++; // ESTO ES PARA CUENTE LOS TRABAJADORES CON COVID
- 
-                System.out.println("Ingrese el monto ingreso promedio por mes");
-                ingresopromedio= economi.nextDouble();
-                System.out.println("Su empresa cuenta con creditos actualmente");
-                creditos = economi.nextBoolean();
-                
-                 break;
-                 
-                 
-            case 2:
-                 System.out.println("Sus datos corresponden a:"+nombre+provincia+ canttrabajcovid+ingresopromedio+creditos);
-                 if(contatrabco==20)
-                     System.out.println("ALERTA ESTO PODRIA EXPONER LA SALUD DE SUS TRABAJADORES");
-                     
-                 break;
-                 
-            case 3:
-                provincias(provincia,poblacion);
-                 
+            switch (opc) {
+
+                case 1: {
+                    System.out.println("Ingrese el nombre completo de su empresa");
+                    nombre = economi.next();
+                    System.out.println("Ingrese el nombre completo de la provincia donde se ubican sus trabajadores");
+                    provincia = economi.next();
+                    Scanner canttrabajador = new Scanner(System.in);
+                    System.out.println("Ingrese la cantidad de trabajadores que han tenido covid 19");
+                    canttrabajcovid = economi.nextBoolean();
+                    if (canttrabajcovid) {
+                        contatrabco++; // ESTO ES PARA CUENTE LOS TRABAJADORES CON COVID
+                    }
+                    System.out.println("Ingrese el monto ingreso promedio por mes");
+                    ingresopromedio = economi.nextDouble();
+                    System.out.println("Su empresa cuenta con creditos actualmente");
+                    creditos = economi.nextBoolean();
+
+                    break;
+                }
+
+                case 2: {
+                    System.out.println("Sus datos corresponden a:" + nombre + provincia + canttrabajcovid + ingresopromedio + creditos);
+                    if (contatrabco == 20) {
+                        System.out.println("ALERTA ESTO PODRIA EXPONER LA SALUD DE SUS TRABAJADORES");
+                    }
+
+                    break;
+                }
+                case 3: {
+                    provincias(provincia, poblacion);
+
+                    break;
+                }
+                case 4: {
+
+                    limitecredito(provincia, poblacion, limitcredit, totalcredito, contatrabco, cantidadtrabajadores);
+                    //double limitcredit = 0;
+                    //while (limitcredit < 1000) {
+                    //double totalcredito = (contatrabco / cantidadtrabajadores * poblacion);
+                }
+
                 break;
-            case 4:
-                
-                double limitcredit=0;
-                while(limitcredit<1000){
-                    double totalcredito= (contatrabco/cantidadtrabajadores*poblacion);
-                     }
-           case 5: 
-                    
-                    if(canttrabajcovid>10&&<0)
-                    
-                
-                break;
-                
-                 }
+                case 5: {
+                    double interes = 0;
+                    if (cantidadtrabajadores < 10) {
+                        interes = totalcredito * 0.5;
+                    }
+
+                    break;
+                }
+                default:
+            }
+
         }
-        
-
-    //PRIMER METODO QUE APLIC
-        public static void provincias(String provincia,double poblacion){
-    
-                if(provincia=="Alajuela"){
-                    poblacion =848146;
-                
-                }
-                else if (provincia=="San Jose"){
-                    poblacion = 1404242;
-                }
-                
-                else if (provincia=="Cartago"){
-                    poblacion = 490903;
-                }
-                else if (provincia=="Heredia"){
-                    poblacion = 433677;
-                }
-                else if (provincia=="Guanacaste"){
-                    poblacion = 326953;
-                }
-                else if (provincia=="Puntarenas"){
-                    poblacion = 410929;
-                }
-                 else if (provincia=="Limon"){
-                    poblacion = 386862;
-                }
-                 else{ 
-                 System.out.println("EL DATO SELECCIONADO ES INVALIDO");
-                 }
-    
-    
     }
 
- }
+    //PRIMER METODO QUE APLIC
+    public static void provincias(String provincia, double poblacion) {
 
- 
+        if (provincia == "Alajuela") {
+            poblacion = 848146;
+
+        } else if (provincia == "San Jose") {
+            poblacion = 1404242;
+        } else if (provincia == "Cartago") {
+            poblacion = 490903;
+        } else if (provincia == "Heredia") {
+            poblacion = 433677;
+        } else if (provincia == "Guanacaste") {
+            poblacion = 326953;
+        } else if (provincia == "Puntarenas") {
+            poblacion = 410929;
+        } else if (provincia == "Limon") {
+            poblacion = 386862;
+        } else {
+            System.out.println("EL DATO SELECCIONADO ES INVALIDO");
+        }
+
+    }
+
+    public static void limitecredito(String provincia, double poblacion, double limitcredit, double totalcredito, int contatrabco, int cantidadtrabajadores) {
+
+        if (provincia == "Alajuela") {
+            poblacion = 848146;
+
+        } else if (provincia == "San Jose") {
+            poblacion = 1404242;
+        } else if (provincia == "Cartago") {
+            poblacion = 490903;
+        } else if (provincia == "Heredia") {
+            poblacion = 433677;
+        } else if (provincia == "Guanacaste") {
+            poblacion = 326953;
+        } else if (provincia == "Puntarenas") {
+            poblacion = 410929;
+        } else if (provincia == "Limon") {
+            poblacion = 386862;
+        } else {
+            System.out.println("EL DATO SELECCIONADO ES INVALIDO");
+        }
+        limitcredit = 0;
+        while (limitcredit < 1000) {
+            totalcredito = (contatrabco / cantidadtrabajadores * poblacion);
+
+        }
